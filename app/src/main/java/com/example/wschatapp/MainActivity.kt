@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity() {
         try {
             for(message in incoming) {
                 message as? Frame.Text ?: continue
-                Log.d(TAG, "Server: ${message.readText()}")
+                Log.d(TAG, message.readText())
             }
         } catch (e: Exception) {
             Log.e(TAG, "outputMessages: Error receiving message\n${e.message}")
